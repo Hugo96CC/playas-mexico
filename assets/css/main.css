@@ -1,0 +1,366 @@
+/* 
+
+*** Paleta de colores ***
+
+Rosa: #C6426E
+Morado: #642B73
+Negro: #999
+Gris: #f5f5f5
+Rosa: #d500f9
+
+*/
+
+
+/*
+*** Notas ***
+
+Por defecto los DIV ocupan el 100% del ancho de la pantalla asi que no es necesario utilizar: width: 50vw
+
+
+*/
+
+
+/* *** MODIFICAMOS LA FUENTE DE NUESTRO SITIO WEB *** */
+html{
+
+    font-family: 'Nunito', sans-serif;
+
+}
+
+
+
+/* *** EDICCION DE ELANCES *** */
+a{
+
+  /*  text-decoration: underline; /* Valor por defecto linea abajo del texto */
+  /* text-decoration:line-through ; /* Valor que pone la linea en medio del texto*/
+  /* text-decoration: overline;  /* Valor que pone la linea por arriba del texto*/
+
+  text-decoration: none;
+  color: #1B65A7; /*Letras ver mas */
+
+}
+
+
+img{
+
+    max-width: 100%;
+}
+
+a:hover{
+
+    opacity: 0.8;
+}
+
+/*** visited, active, focus ***/
+/*
+a:active{
+
+    background: red;
+}
+*/
+
+
+
+/* *** APLICADOS A LOS H1 *** */
+.title{
+
+   
+    /*text-transform: capitalize; /* Primera letra de cada palabra en mayusculas */
+    /*text-transform: lowercase; /* Lestras en minusculas */
+    text-transform: uppercase; /* Letras mayusculas */
+    text-align: center;
+   
+   
+
+
+}
+
+/* *CONTENEDOR QUE ABARCA TODA LA PAGINA *** */
+.container{
+
+ 
+    /* Aplicando degradado (Mejora progresiva) */
+    background: #1B65A7; /* Respaldo */
+    background: -webkit-linear-gradient(to right, #1B65A7, #1B65A7);
+    background: linear-gradient(to right, #1B65A7, #1B65A7);
+    height: 100vh; /* Ocupa el 100% de la pantalla */
+
+    
+    /* POSICIONAMIENTO*/
+
+    /* Centramos horinzontalmente y verticalmente nuestro contendor padre por consecuencia igual adapto esto los contenedores hijos*/
+    /* Dependiendo de la direccion del Layou se puede manipular con la propiedad Flex-Direction*/
+    display: flex;
+    align-items: center; /* Dependiendo del contexto centra horizontal o verticalmente */
+    justify-content: center; /* Dependiendo del contexto centra horizontal o verticalmente */
+
+}
+
+
+/* ***CONTENEDOR QUE ABARCA LA INFORMACION *** */
+.content{
+
+    max-width: 960px;
+    width: 100%;
+    height: 80vh; /* Ocupa el 80% de la panatalla*/
+    background-color: white;
+
+    /* *** COLOCANDO SOBRAS *** */
+    /*box-shadow: diferenciaHorizontal diferenciaVertical desenfoque amplitud color  */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 4px;
+
+    position: relative; /*Indicar que es un elemento posicionado*/
+    
+    /* *Valores de overflow: hidden: escoden el contenido, scroll: coloca barras lateral y abajo para mover el contenido* */
+    /* overflow:scroll; */
+
+    
+   /* overflow-y: scroll;
+    overflow-x: hidden;
+    */
+
+    /* ***NOS AYUDA A QUE NO SE DEBORDE EL CONTENDIO (SEA RESPONSIVO) *** */
+    overflow: scroll;
+
+
+}
+
+.content{
+    padding: 1em;
+}
+
+td{
+    display: block; /*Convertimos las columnas en filas */
+    width: 100%; /* Los TD ocupen todo el ancho de la pantalla*/
+}
+
+td:nth-of-type(1){
+
+    font-size: 1.5em; /*Cambiamos el tamaño de la fuente del numero*/
+    font-weight: bold; /*Negritas*/
+    color: #040615 /*Cambiamos de color el numero pagina principal*/
+}
+
+th{
+    display: none; /* Ocultamos los encabezados de la tabla*/
+}
+
+
+
+
+.actions{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+
+}
+.close{
+
+    height: 40px;
+    width: 40px;
+    color: white;
+    border-radius: 50%;
+    background-color: #1B65A7;
+    display: inline-block; /* Para que identifique el tamaño del circulo (inline es un valor por default)*/
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    font-weight: 300;
+    cursor: pointer;
+    display: flex; /* Centar el span que contiene la X */
+    align-items: center; /* Centar el span que contiene la X */
+    justify-content: center; /* Centar el span que contiene la X */
+}
+
+
+/* *** APLICAMOS ESPACIO ENTRE LOS PARRAFOS *** */
+
+.paragraph{
+
+    line-height: 1.8em; /* Espacios entre los parrafos (interlineado) */
+    font-weight: 300; /* Cambiamos fuente */
+}
+
+
+/* ***COLOCAR COLOR A NUESTRAS ESTRELLAS*** */
+
+.fa-star{
+
+    color: #ffc400;
+   
+    
+}
+
+.table{
+
+    width: 100%; /* Indicamos que la tabla ocupe el 100% de spacio disponible*/
+    border-spacing: 0; /* Eliminamos los espacios que hay entre las fila y columnas */
+}
+
+.table td, .table th{
+
+    /*padding: 6.6px;*/
+    padding: 1em;
+    text-align: left;
+    
+}
+
+
+/*  ***COLOCANDO COLOR A LAS FILAS PARES *** */
+.table tr:nth-child(even){ background-color:#F2F4F5;} /* odd: impares - even: pares*/
+
+
+
+.title-item{
+
+   /* border-bottom-style: solid;
+    border-width: 2px;
+    border-color: #C6426E;*/
+
+    /* ***APLICAMOS SHORTHAND PROPERTIES *** */
+
+    font-size: 2em; /*Tamaño de fuente*/
+    border-bottom: #1B65A7 solid 2px ;
+    padding-bottom: 1em;
+    
+
+
+    /* Ejemplo de shorthand properties
+
+
+    padding: arriba derecha abajo izquierda;
+    padding: arriba/abajo drecha/izqierda;
+    */
+
+    padding: 10px;
+}
+
+
+.line-principal{
+
+    border-bottom: #1B65A7 solid 2px;
+    padding-bottom: 0px;
+    padding: 0px;
+
+}
+
+.address{
+
+    font-weight: bold;
+    color: #040615;/*Letras dirrecion*/
+    font-size: 1.2em;
+    margin-top: 2em;
+    display: inline-block; /* Display inline(ignora los margnes) por ello es necesario definir inline-block */
+}
+
+.main-image{
+
+    float: left; /* Mover a la imagen hacia de izquiersa del texto*/
+    margin-right: 1em; /* MArgen entre la imagen y el texto*/
+    height: 250px;
+
+
+}
+
+
+/* *** NUMERO DE BALNEARIO*** */
+.position{
+
+    background-color: #1B65A7; /* Color de fondo*/
+    color: white; /*Color de fuente*/
+    padding: 0.5em; /*Tamaño de los cuerpo del fondo del numero*/
+    border-radius: 4px; /* Aplicamos para que los borde esten curveados*/
+    margin-right: 0.5em; 
+}
+
+/*Mapa responsivo*/
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+
+}
+
+.fa-location-dot{
+
+    color: #1B65A7;
+}
+
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+
+}
+
+
+/* CUANDO TENGA UN MINIMO DE 900PX DE ANCHO*/
+@media (min-width:900px){ 
+
+   
+
+    th{
+
+        display: table-cell; /* Regresamos las columnas y filas a su forma original*/
+        color: #040615;
+
+    }
+
+    td{
+        width: auto; /* Se alinen automaticamente las filas */
+        display: table-cell; /* Regresamos las columnas y filas a su forma original*/
+
+    }
+
+    td:nth-of-type(1){/*Elegimos el primer td(columna) de cada tr*/
+
+        font-size: 1em;
+    }
+
+    .content{
+
+        padding: 1.8em; /* Para que el texto este mejor centrado */
+        /*overflow: hidden;*/
+    
+    
+    }
+
+   
+
+}
+
+
+
+/* CUANDO TENGA UN MINIMO DE 550PX DE ALTO*/
+@media (min-height:550px){
+
+    .content{
+
+        height: 500px;
+    }
+
+}
+
+@media (max-width:411px){
+
+    .title-item{
+
+        font-size: 1.5em;
+        
+        
+    }
+
+    .actions{
+        position: absolute;
+        top: 1em;
+        right: 1em;
+
+    }
+}
+
+
+
+
