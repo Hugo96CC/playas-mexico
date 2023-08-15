@@ -5,6 +5,7 @@
 // Obtener los elementos de la clase .close
 
 let links = document.querySelectorAll(".close");
+console.log("Hola Mundo");
 
 // Recorrelos
 
